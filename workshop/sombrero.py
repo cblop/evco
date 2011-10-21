@@ -1,4 +1,4 @@
-from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mplot3d import axes3d, Axes3D
 from matplotlib import cm
 from matplotlib.ticker import LinearLocator, FormatStrFormatter
 import matplotlib.pyplot as plt
@@ -11,7 +11,7 @@ def sombrero(c=None):
         return Z
     else:
         fig = plt.figure()
-        ax = fig.gca(projection='3d')
+        ax = Axes3D(fig)
         X = np.arange(0, 10, 0.2)
         Y = np.arange(0, 10, 0.2)
         X, Y = np.meshgrid(X, Y)
